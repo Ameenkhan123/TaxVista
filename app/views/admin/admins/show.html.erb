@@ -1,0 +1,17 @@
+<div class="container">
+  <p>
+    <strong>First Name:</strong>
+    <%= @admin.first_name %>
+  </p>
+  <p>
+    <strong>Last Name:</strong>
+    <%= @admin.last_name%>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @admin.email%>
+  </p>
+
+  <%= link_to 'Back', admin_admins_path %></a> |
+  <%= link_to 'Edit',[:edit, :admin, @admin] %>  </a>
+</div>

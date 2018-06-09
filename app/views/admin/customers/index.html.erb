@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="table-text-customers"> All Customers</h1>
+  <hr>
+  <table id="table-customers" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Mobile No</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.first_name %></td>
+        <td><%= customer.last_name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.mobile %></td>
+        <td><%= link_to 'Show', [:admin, customer]%>
+          <%= link_to 'Edit', [:edit, :admin, customer] %>
+          <%= link_to 'Destroy',  [:admin, customer], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'New Customer ', new_admin_customer_path, class: 'table-button-customers btn btn-primary' %>
+</div>

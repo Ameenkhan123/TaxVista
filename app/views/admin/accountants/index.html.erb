@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <h1 class="table-text-accountants"> All Accountants</h1>
+  <hr>
+  <table id="table-accountants" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Mobile No</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @accountants.each do |accountant| %>
+      <tr>
+        <td><%= accountant.first_name %></td>
+        <td><%= accountant.last_name %></td>
+        <td><%= accountant.email %></td>
+        <td><%= accountant.mobile %></td>
+        <td><%= link_to 'Show', [:admin, accountant]%>
+          <%= link_to 'Edit', [:edit, :admin, accountant] %>
+          <%= link_to 'Destroy',  [:admin, accountant], method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'New Accountant ', new_admin_accountant_path, class: 'table-button-accountants btn btn-primary' %>
+</div>
