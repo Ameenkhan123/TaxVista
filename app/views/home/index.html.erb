@@ -1,31 +1,62 @@
- <header>     
-  <div id="demo" class="carousel slide" data-ride="carousel" style="width: 100%; height: 500px">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
-    </ul>
-    
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <%= image_tag 'tax-planning',style:"width:100%; height:500px " %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag 'stefan', style:"width:100%; height:500px "%>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag 'nik',style:"width:100%; height:500px ", class: 'img-fluid' %>
-      </div>
-    </div>
-    
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
-  </div>
+<header>     
+	<div id="demo" class="carousel slide" data-ride="carousel" style="width: 100%; height: 500px">
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<%= image_tag 'tax-planning',style:"width:100%; height:500px " %>
+			</div>
+			<div class="carousel-item">
+				<%= image_tag 'stefan', style:"width:100%; height:500px "%>
+			</div>
+			<div class="carousel-item">
+				<%= image_tag 'nik',style:"width:100%; height:500px ", class: 'img-fluid' %>
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
 </header>
+<br class="clear" />
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<a href="#"><%= image_tag 'logo6',style:"width:100%; height:360px "%></a>
+		</div>
+		<div class="col-md-6">
+			<div class="fl_right">
+				<h2 class="innerfornt" >Get your biggest refund</h2>
+				<h3 class="contact-text">
+					<p class="innerfornt" align="left">
+						<b style="color: green">Tax reform</b><br>
+						The largest tax bill in 30 years has been signed. We will help you plan your 2018 financials based on your 2017 return.
+					</p>
+					<br>
+					<p class="innerfornt" align="justify">
+						<b style="color: green">Protect your identity</b><br>
+						We don't outsource our work to an offshore location. Your data is in US and we work 100% from our US based location.
+					</p>
+					<br>
+					<p class="innerfornt" align="left">
+						<b style="color: green">IRS Certified Acceptance Agent</b><br>
+						As IRS Certified Acceptance Agent for ITIN processing, we are authorized to process ITINs for both your spouse and kids from our office without the need to visit IRS office.
+					</p>
+					<br> <p style="color: green">Guaranteed low price, or we will do your return for free.</p>
+				</h3>
+			</div>
+			<br class="clear" />
+		</div>
+	</div>
+</div>
