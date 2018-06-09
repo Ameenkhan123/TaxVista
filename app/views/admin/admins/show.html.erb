@@ -1,17 +1,21 @@
 <div class="container">
-  <p>
-    <strong>First Name:</strong>
-    <%= @admin.first_name %>
-  </p>
-  <p>
-    <strong>Last Name:</strong>
-    <%= @admin.last_name%>
-  </p>
-  <p>
-    <strong>Email:</strong>
-    <%= @admin.email%>
-  </p>
-
-  <%= link_to 'Back', admin_admins_path %></a> |
-  <%= link_to 'Edit',[:edit, :admin, @admin] %>  </a>
+  <div id="show" class="card">
+    <div class="card-body">
+      <p>
+        <strong>First Name:</strong>
+        <%= @admin.first_name %>
+      </p>
+      <p>
+        <strong>Last Name:</strong>
+        <%= @admin.last_name%>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @admin.email%>
+      </p>
+      
+      <%= link_to 'Back', admin_admins_path, class: 'btn btn-primary' %></a> |
+      <%= link_to 'Edit',[:edit, :admin, @admin], class: 'btn btn-success' %>  </a>
+    </div>
+  </div>
 </div>

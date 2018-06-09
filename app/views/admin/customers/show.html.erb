@@ -1,20 +1,24 @@
 <div class="container">
-  <p>
-    <strong>First Name:</strong>
-    <%= @customer.first_name %>
-  </p>
-  <p>
-    <strong>Last Name:</strong>
-    <%= @customer.last_name%>
-  </p>
-  <p>
-    <strong>Email:</strong>
-    <%= @customer.email%>
-  </p>
-  <p>
-    <strong>Mobile:</strong>
-    <%= @customer.mobile %>
-  </p>
-  <%= link_to 'Back', admin_customers_path %></a> |
-  <%= link_to 'Edit',[:edit, :admin, @customer] %>  </a>
+  <div id="show" class="card">
+    <div class="card-body">
+      <p>
+        <strong>First Name:</strong>
+        <%= @customer.first_name %>
+      </p>
+      <p>
+        <strong>Last Name:</strong>
+        <%= @customer.last_name%>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @customer.email%>
+      </p>
+      <p>
+        <strong>Mobile:</strong>
+        <%= @customer.mobile %>
+      </p>
+      <%= link_to 'Back', admin_customers_path, class: 'btn btn-primary' %></a> |
+      <%= link_to 'Edit',[:edit, :admin, @customer], class: 'btn btn-success' %>  </a>
+    </div>
+  </div>
 </div>
