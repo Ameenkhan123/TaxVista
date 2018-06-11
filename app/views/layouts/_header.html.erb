@@ -1,29 +1,45 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+  <!-- <a class="navbar-brand" href="#">Logo</a> -->
   <ul class="navbar-nav" style="white-space: nowrap;">
-    <li class="nav-item">
-      <%= link_to 'Home', home_path, class: "nav-link" %>
-    </li>
+     <li class="nav-item">
+       <%= link_to 'Home', home_path, class: "nav-link" %>
+     </li>
      <li class="nav-item">
       <%= link_to 'Contact Us', contact_path, class: "nav-link" %>
-    </li>
+     </li>
+    <!-- Customer -->
     <% if customer_signed_in? %>  
+       <li class="nav-item">
+        <a href="#"> <%= link_to('Edit profile', edit_customer_registration_path, class: "nav-link") %> </a>
+      </li>
       <li class="nav-item">
         <a href="#"> <%= link_to('Logout', destroy_customer_session_path, method: :delete, class: "nav-link") %> </a>
       </li>
+    <!-- Accountant -->
     <% elsif accountant_signed_in? %>  
+      <li class="nav-item">
+        <a href="#"> <%= link_to('Edit profile', edit_accountant_registration_path, class: "nav-link") %> </a>
+      </li>
       <li class="nav-item">
         <a href="#"><%= link_to('Logout', destroy_accountant_session_path, method: :delete, class: "nav-link") %> </a>
       </li>
+    <!-- Admin -->
     <% elsif admin_signed_in? %>  
+      <li class="nav-item">
+        <a href="#"> <%= link_to('Edit profile', edit_admin_registration_path, class: "nav-link") %> </a>
+      </li>
+      <li class="nav-item">
+        <a href="#"><%= link_to('Dashboard', admin_dashboard_path, class: "nav-link") %> </a>
+      </li>
       <li class="nav-item">
         <a href="#"><%= link_to('Logout', destroy_admin_session_path, method: :delete, class: "nav-link") %> </a>
       </li>
     <% else %>
       <li class="nav-item">
-       <a href="#"><%= link_to('accountant Login', new_accountant_session_path, class: "nav-link")%></a>
+       <a href="#"><%= link_to('Accountant', new_accountant_session_path, class: "nav-link")%></a>
      </li>
      <li class="nav-item">  
-       <a href="#"><%= link_to('customer Login', new_customer_session_path, class: "nav-link")  %></a>
+       <a href="#"><%= link_to('Customer', new_customer_session_path, class: "nav-link")  %></a>
      </li>  
    <% end %>
  </ul>
