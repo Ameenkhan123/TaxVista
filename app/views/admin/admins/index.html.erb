@@ -1,7 +1,7 @@
-<div class="container">
+<div>
   <h1  class="table-text-admins"> All admins</h1>
   <hr>
-  <table id="table-admins" class="table table-striped table-bordered">
+  <table id="example" class="table table-striped table-bordered table-admins">
     <thead>
       <tr>
         <th>First Name</th>
@@ -17,9 +17,9 @@
         <td><%= admin.first_name %></td>
         <td><%= admin.last_name %></td>
         <td><%= admin.email %></td>
-        <td><%= link_to 'Show', [:admin, admin]%>
-          <%= link_to 'Edit', [:edit, :admin, admin] %>
-          <%= link_to 'Destroy',  [:admin, admin], method: :delete, data: { confirm: 'Are you sure?' } %>
+        <td><%= link_to 'Show', [:admin, admin], class: 'btn btn-primary'%>
+          <%= link_to 'Edit', [:edit, :admin, admin], class: 'btn btn-success' %>
+          <%= link_to 'Destroy',  [:admin, admin], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </td>
       </tr>
       <% end %>

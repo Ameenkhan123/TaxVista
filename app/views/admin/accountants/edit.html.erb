@@ -1,6 +1,8 @@
 <div class="container top">
-  <h1>Editing accountant</h1>
-  <%= render 'form', accountant: @accountant %>
-  <%= link_to 'Show',  [:admin, @accountant] %> |
-  <%= link_to 'Back', admin_accountants_path %>
+  <h1 class="create-accountant">Editing accountant</h1><hr>
+  <div class="form-accountant">
+    <%= render 'form', accountant: @accountant %>
+    <%#= link_to 'Show',  [:admin, @accountant] %>
+    <%#= link_to 'Back', admin_accountants_path %>    
+  </div>
 </div>

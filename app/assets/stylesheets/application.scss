@@ -2,3 +2,7 @@
 @import "custom";
 @import "admin/dashboard";
 @import "admin/table";
+
+@-ms-viewport{
+  width: device-width;
+}

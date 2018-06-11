@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div>
   <h1 class="table-text-accountants"> All Accountants</h1>
   <hr>
-  <table id="table-accountants" class="table table-striped table-bordered">
+  <table id="example" class="table table-striped table-bordered">
     <thead>
       <tr>
         <th>First Name</th>
@@ -19,9 +19,9 @@
         <td><%= accountant.last_name %></td>
         <td><%= accountant.email %></td>
         <td><%= accountant.mobile %></td>
-        <td><%= link_to 'Show', [:admin, accountant]%>
-          <%= link_to 'Edit', [:edit, :admin, accountant] %>
-          <%= link_to 'Destroy',  [:admin, accountant], method: :delete, data: { confirm: 'Are you sure?' } %>
+        <td><%= link_to 'Show', [:admin, accountant], class: 'btn btn-primary'%>
+          <%= link_to 'Edit', [:edit, :admin, accountant], class: 'btn btn-success' %>
+          <%= link_to 'Destroy',  [:admin, accountant], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </td>
       </tr>
       <% end %>
