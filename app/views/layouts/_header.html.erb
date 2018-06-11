@@ -26,9 +26,6 @@
     <!-- Admin -->
     <% elsif admin_signed_in? %>  
       <li class="nav-item">
-        <a href="#"> <%= link_to('Edit profile', edit_admin_registration_path, class: "nav-link") %> </a>
-      </li>
-      <li class="nav-item">
         <a href="#"><%= link_to('Dashboard', admin_dashboard_path, class: "nav-link") %> </a>
       </li>
       <li class="nav-item">
