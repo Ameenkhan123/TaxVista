@@ -3,7 +3,7 @@
   <head>
     <title>TaxVista</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
      
@@ -14,11 +14,7 @@
 
   <body>
     <%= render 'layouts/admin_header'%>
-    <div class="container-fluid">
-      <div class="row">
-        <%= yield %>
-      </div>
-    </div>
+      <%= yield %>
     <%= render 'layouts/admin_side'%>
   </body>
 </html>

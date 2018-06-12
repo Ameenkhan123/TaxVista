@@ -1,32 +1,35 @@
-<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-	<div class="sidebar-sticky">
-		<ul class="nav flex-column">
-			<li class="nav-item">
-				<%= link_to admin_dashboard_path,class: "nav-link"  do %>
-				<i data-feather="home"></i>  Dashboard
-				<% end %>
-			</li>
-			<% if admin_signed_in? %>
-			<li class="nav-item">
-				<%= link_to admin_admins_path,class: "nav-link"  do %>
-				<i data-feather="users"></i>  Admin
-				<% end %>
-			</li>
-			<li class="nav-item">
-				<%= link_to admin_accountants_path,class: "nav-link"  do %>
-				<i data-feather="users"></i>  Accountants
-				<% end %>
-			</li>
-			<li class="nav-item">
-				<%= link_to admin_customers_path,class: "nav-link"  do %>
-				<i data-feather="users"></i>  Customers
-				<% end %>
-			</li>
-			<% end %>
-		</ul>
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+			<div class="sidebar-sticky">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<%= link_to admin_dashboard_path,class: "nav-link"  do %>
+						<i data-feather="home"></i>  Dashboard
+						<% end %>
+					</li>
+					<% if admin_signed_in? %>
+					<li class="nav-item">
+						<%= link_to admin_admins_path,class: "nav-link"  do %>
+						<i data-feather="users"></i>  Admin
+						<% end %>
+					</li>
+					<li class="nav-item">
+						<%= link_to admin_accountants_path,class: "nav-link"  do %>
+						<i data-feather="users"></i>  Accountants
+						<% end %>
+					</li>
+					<li class="nav-item">
+						<%= link_to admin_customers_path,class: "nav-link"  do %>
+						<i data-feather="users"></i>  Customers
+						<% end %>
+					</li>
+					<% end %>
+				</ul>
+			</div>
+		</nav>
 	</div>
-</nav>
-
+</div>
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 <script>
 	feather.replace()

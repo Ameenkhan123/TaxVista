@@ -39,3 +39,104 @@
     height: 414px;
 }
 //**Contact Us**\\
+
+//**Navbar**\\
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(60, 53, 53, 0.25)!important;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+  width:10%;
+  height:45px;
+  margin-right:65%;
+}
+#navbar {        
+  height: 49px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1rem 1rem;
+}
+
+.taxvistalogo{
+  width:auto;
+  height: 70px;
+}
+
+.rj_logo_s{
+  width:auto;
+  height: 80px;
+  margin-left: 66%;
+}
+//** End Navbar**\\
+
+//**Footer**\\
+
+.taxvistalogo-image{
+  width: 21%;
+  height: 69px;
+  margin-top:0%
+}
+//** End Footer**\\
+
+//** Refer **\\
+
+.referrals-must-complete{
+  margin-top:5%;
+  border:1px solid grey;
+  height: 13%; 
+  margin-left: 14%;
+}
+.button {
+  text-decoration: none;
+  text-align: center;
+  padding: 11px 32px;
+  border: none;
+  font: 14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #e3e3e3;
+  background: #b20000;
+  -webkit-box-shadow: inset 0px 0px 1px #ffffff;
+  -moz-box-shadow: inset 0px 0px 1px #ffffff;
+  box-shadow: inset 0px 0px 1px #ffffff;
+  height:40px;
+  width:145px;
+  margin-top:100px; 
+  margin-left: 14% !important;
+}
+
+.textarea{
+  float:right;
+  height: 60px; 
+  margin-left:5%; 
+  margin-top: -4%
+}
+
+.label{
+  margin-left: 14% !important;
+}
+
+.give-your-friends{
+  font-size:13px;
+  color:red;
+  font-weight:bold;
+  margin-top: -2%;
+}
+.for-a-limited-time{
+  font-size:13px;
+}
+.fl_right{
+  margin-top:5%;
+  border:1px solid grey;
+  height: 13%; 
+  margin-left: 14%;
+}
+.refer-image{
+  margin-top: 11%;
+  width: 130%;
+  height:350px;
+}
+//** End Refer **\\

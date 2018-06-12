@@ -1,5 +1,6 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
-  <!-- <a class="navbar-brand" href="#">Logo</a> -->
+<%= image_tag 'taxvistalogo',class: "taxvistalogo" %><%= image_tag 'rj_logo_s',class: "rj_logo_s" %>
+<!-- <hr> -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end" id="navbar">
   <ul class="navbar-nav" style="white-space: nowrap;">
      <li class="nav-item">
        <%= link_to 'Home', home_path, class: "nav-link" %>
@@ -9,6 +10,9 @@
      </li>
     <!-- Customer -->
     <% if customer_signed_in? %>  
+       <li class="nav-item">
+        <a href="#"><%= link_to('Refer a Friend', refer_path, class: "nav-link") %></a>
+       </li>
        <li class="nav-item">
         <a href="#"> <%= link_to('Edit profile', edit_customer_registration_path, class: "nav-link") %> </a>
       </li>

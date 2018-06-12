@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home' => 'home#index'
   get 'contact' => 'home#contact'
+  get 'refer' => 'home#refer'
   devise_for :admins
   devise_for :customers
   devise_for :accountants
