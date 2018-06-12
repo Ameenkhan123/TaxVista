@@ -89,6 +89,7 @@
   border:1px solid grey;
   height: 13%; 
   margin-left: 14%;
+  color: #666666;
 }
 .button {
   text-decoration: none;
@@ -117,6 +118,8 @@
 
 .label{
   margin-left: 14% !important;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #666666;
 }
 
 .give-your-friends{
@@ -128,15 +131,35 @@
 .for-a-limited-time{
   font-size:13px;
 }
-.fl_right{
+#fl_right{
   margin-top:5%;
   border:1px solid grey;
   height: 13%; 
   margin-left: 14%;
+  color: #666666;
 }
 .refer-image{
   margin-top: 11%;
   width: 130%;
   height:350px;
+}
+.card{
+  margin-top: 1%;
+}
+
+.col-sm-4{
+  margin-top: -1%;
+}
+
+.col-sm-8{
+  margin-top: -2%;
+}
+
+.form-top{
+  margin-top:40px;
+}
+
+.left-row{
+  margin-left: 0%;
 }
 //** End Refer **\\
