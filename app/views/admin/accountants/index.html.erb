@@ -8,7 +8,9 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Mobile No</th>
-        <th>Actions</th>
+        <th>show</th>
+        <th>edit</th>
+        <th>delete</th>
       </tr>
     </thead>
 
@@ -19,9 +21,9 @@
         <td><%= accountant.last_name %></td>
         <td><%= accountant.email %></td>
         <td><%= accountant.mobile %></td>
-        <td><%= link_to 'Show', [:admin, accountant], class: 'btn btn-primary'%>
-          <%= link_to 'Edit', [:edit, :admin, accountant], class: 'btn btn-success' %>
-          <%= link_to 'Destroy',  [:admin, accountant], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <td><%= link_to 'Show', [:admin, accountant], class: 'btn btn-primary'%></td>
+        <td><%= link_to 'Edit', [:edit, :admin, accountant], class: 'btn btn-success' %></td>
+        <td><%= link_to 'Destroy',  [:admin, accountant], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </td>
       </tr>
       <% end %>
