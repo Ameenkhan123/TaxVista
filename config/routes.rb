@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'home' => 'home#index'
   get 'contact' => 'home#contact'
   get 'refer' => 'home#refer'
+  get 'customer' => 'home#customer_dashboard'
   devise_for :admins
   devise_for :customers
   devise_for :accountants
