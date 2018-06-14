@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firm_name: MyString
+  firm_type: MyString
+  no_of_employees: MyString
+  customers: one
+
+two:
+  firm_name: MyString
+  firm_type: MyString
+  no_of_employees: MyString
+  customers: two

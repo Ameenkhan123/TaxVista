@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_08_064604) do
+ActiveRecord::Schema.define(version: 2018_06_14_045326) do
+
+  create_table "account_transactions", force: :cascade do |t|
+    t.string "account"
+    t.string "transfered_to_acc"
+    t.string "transfered_to_name"
+    t.integer "account_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_account_transactions_on_account_id"
+  end
 
   create_table "accountants", force: :cascade do |t|
     t.string "first_name"
@@ -32,6 +42,16 @@ ActiveRecord::Schema.define(version: 2018_06_08_064604) do
     t.index ["reset_password_token"], name: "index_accountants_on_reset_password_token", unique: true
   end
 
+  create_table "accounts", force: :cascade do |t|
+    t.string "firm_name"
+    t.string "firm_type"
+    t.string "no_of_employees"
+    t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_accounts_on_customer_id"
+  end
+
   create_table "admins", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -49,6 +69,15 @@ ActiveRecord::Schema.define(version: 2018_06_08_064604) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "customer_accountants", force: :cascade do |t|
+    t.integer "accountant_id"
+    t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["accountant_id"], name: "index_customer_accountants_on_accountant_id"
+    t.index ["customer_id"], name: "index_customer_accountants_on_customer_id"
   end
 
   create_table "customers", force: :cascade do |t|

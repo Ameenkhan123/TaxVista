@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <%= link_to('TaxVista', home_path,class: "navbar-brand col-sm-3 col-md-2 mr-0") %>
+  <%= link_to('Edit profile', edit_customer_registration_path, style: "color:white; text-decoration-line: none; white-space: nowrap;") %> 
+  <%= link_to('View in App', home_path, style: "color:white;   text-decoration-line: none; white-space: nowrap; margin-left:60%;") %>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item">
+      <% if customer_signed_in? %>
+      <%= link_to('Logout', destroy_customer_session_path, method: :delete, class: "nav-link", style: "color:white;") %>
+      <% end %>
+    </li>
+  </ul>
+</nav>

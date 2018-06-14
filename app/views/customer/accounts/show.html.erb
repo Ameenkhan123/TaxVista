@@ -1,0 +1,23 @@
+<div class="container">
+  <div id="show" class="card">
+    <div class="card-body">
+      <p>
+        <strong>Firm Name:</strong>
+        <%= @account.firm_name %>
+      </p>
+
+      <p>
+        <strong>Firm type:</strong>
+        <%= @account.firm_type%>
+      </p>
+
+      <p>
+        <strong>no of Employees:</strong>
+        <%= @account.no_of_employees%>
+      </p>
+
+      <%= link_to 'Back', customer_accounts_path, class: 'btn btn-primary' %></a> |
+      <%= link_to 'Edit',[:edit, :customer, @account], class: 'btn btn-success' %>  </a>
+    </div>
+  </div>
+</div>

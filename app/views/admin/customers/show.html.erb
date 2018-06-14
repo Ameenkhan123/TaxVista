@@ -17,6 +17,18 @@
         <strong>Mobile:</strong>
         <%= @customer.mobile %>
       </p>
+       <h3><u>Account Details</u></h3>
+      <% @customer.accounts.each do |account| %>
+       <p>
+        <strong>Firm Name: <%= account.firm_name%></strong>
+       </p>
+       <p>
+        <strong>Firm Type: <%= account.firm_type%></strong>
+       </p>
+       <p>
+        <strong>No oF Employees: <%= account.no_of_employees%></strong>
+       </p>
+      <% end %><br/>
       <%= link_to 'Back', admin_customers_path, class: 'btn btn-primary' %></a> |
       <%= link_to 'Edit',[:edit, :admin, @customer], class: 'btn btn-success' %>  </a>
     </div>

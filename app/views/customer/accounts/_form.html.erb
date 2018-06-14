@@ -1,0 +1,40 @@
+<div class="col-md-12">
+  <div class="container">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 card-body common-from">
+    <%= form_with(model: [:customer, @account], local: true) do |f| %>
+      <% if account.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+        <ul>
+          <% account.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+      <div>
+        <label>firm Name</label>
+        <%= f.text_field :firm_name, class: "form-control" %>
+      </div><br/>
+
+      <div>
+        <label>First type</label>
+        <%= f.text_field :firm_type, class: "form-control" %>
+      </div><br/>
+       
+      <div>
+        <label>No Of Employees</label>
+        <%= f.text_field :no_of_employees, class: "form-control" %>
+      </div>
+      <br/>
+       <%= f.hidden_field :customer_id, value: current_customer.id %>
+      <div class="form-group text-center">
+        <%= f.submit  :id => 'login', :class =>  'btn btn-primary' %>
+        <%= link_to 'Cancel', customer_accounts_path, :class =>  'btn btn-danger' %>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

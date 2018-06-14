@@ -1,0 +1,2 @@
+module Custumer::AccountsHelper
+end

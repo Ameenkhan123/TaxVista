@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transfered_to_acc: MyString
+  transfered_to_name: MyString
+  account: one
+
+two:
+  transfered_to_acc: MyString
+  transfered_to_name: MyString
+  account: two
